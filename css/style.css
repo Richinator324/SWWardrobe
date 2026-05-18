@@ -22,9 +22,9 @@ header {
   align-items: center;
   width: 100%;
   padding: 5px 15px;
-  background-color: #4a0f0f;
+  background-color: #832d02;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  color: #ff6b6b;
+  color: #e36424;
   font-size: 16px;
   text-transform: uppercase;
   gap: 8px;
@@ -39,7 +39,7 @@ header img {
 #container {
   display: flex;
   flex-direction: row;
-  background: #2a1414;
+  background: #f5915f;
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -53,7 +53,7 @@ header img {
 #controls {
   padding: 20px;
   width: 300px;
-  background: #3a1c1c;
+  background: #f5915f;
   display: flex;
   flex-direction: column;
   gap: 15px;
@@ -64,7 +64,7 @@ header img {
   margin: 0;
   text-align: center;
   font-size: 1.5rem;
-  color: #ff6b6b;
+  color: #e36424;
 }
 
 /* INPUTS + BUTTONS */
@@ -77,13 +77,13 @@ header img {
 }
 
 #controls input {
-  background: #4a2a2a;
-  color: #f5dada;
-  border: 1px solid #ff6b6b;
+  background: #f5915f;
+  color: #e6bda9;
+  border: 1px solid #e36424;
 }
 
 #controls button {
-  background: #b22222;
+  background: #863e1a;
   color: white;
   cursor: pointer;
   font-weight: bold;
@@ -107,7 +107,7 @@ canvas {
   width: 100%;
   height: 100%;
   display: block;
-  border: 1px solid #ff6b6b;
+  border: 1px solid #e36424;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
 }
 
@@ -116,8 +116,8 @@ canvas {
   padding: 10px;
   border: none;
   border-radius: 5px;
-  background: #b22222;
-  color: white;
+  background: #e36424;
+  color: #e6bda9;
   font-weight: bold;
   cursor: pointer;
   margin-top: 10px;
@@ -137,7 +137,7 @@ canvas {
 .custom-select select {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ff6b6b;
+  border: 1px solid #e36424;
   border-radius: 5px;
   background: #4a2a2a;
   color: #f5dada;
@@ -152,6 +152,6 @@ canvas {
   top: 50%;
   right: 15px;
   transform: translateY(-50%);
-  color: #ff6b6b;
+  color: #e36424;
   pointer-events: none;
 }
