@@ -1,14 +1,14 @@
 {
-  "name": "SWWardrobe",
+  "name": "SolanduWardrobe",
   "version": "1.0.0",
   "description": "",
-  "homepage": "https://github.com/Richinator324/SWWardrobe#readme",
+  "homepage": "https://github.com/Richinator324/SolanduWardrobe#readme",
   "bugs": {
-    "url": "https://github.com/Richinator324/SWWardrobe/issues"
+    "url": "https://github.com/Richinator324/SolanduWardrobe/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Richinator324/SWWardrobe.git"
+    "url": "git+https://github.com/Richinator324/SolanduWardrobe.git"
   },
   "license": "ISC",
   "author": "Richinator324",
