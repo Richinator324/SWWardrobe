@@ -47,15 +47,14 @@ const overlayClothing = (clothingPath) => {
 
 // Function to update the 3D viewer with selected clothing
 const updateSkin = async () => {
-    const clothingPath = `${import.meta.env.BASE_URL}textures/${value}.png`; 
- 
+    const clothingPath = `./${document.getElementById("clothingSelect").value}.png`;
+
     try {
         // Apply the selected clothing overlay
         const modifiedSkin = await overlayClothing(clothingPath);
 
         // Load the modified skin into the viewer
         viewer.loadSkin(modifiedSkin);
-
         // Enable the download button
         const downloadButton = document.getElementById("downloadButton");
         downloadButton.style.display = "block";
@@ -81,36 +80,6 @@ document.getElementById("upload").addEventListener("change", (e) => {
             updateSkin();
         };
         reader.readAsDataURL(file);
-    }
-});
-
-// Event listener for username search
-document.getElementById("searchButton").addEventListener("click", async () => {
-    const username = document.getElementById("username").value;
-    if (username) {
-        try {
-            const response = await fetch(`https://api.ashcon.app/mojang/v2/user/${username}`);
-            if (!response.ok) {
-                alert("Username not found!");
-                return;
-            }
-            const data = await response.json();
-            const uuid = data.uuid;
-
-            // Use Crafatar to get the skin
-            const skinUrl = `https://crafatar.com/skins/${uuid}`;
-            const skinResponse = await fetch(skinUrl);
-            const blob = await skinResponse.blob();
-
-            const reader = new FileReader();
-            reader.onload = (event) => {
-                currentSkinBase64 = event.target.result;
-                updateSkin();
-            };
-            reader.readAsDataURL(blob);
-        } catch (error) {
-            alert("An error occurred while fetching the skin.");
-        }
     }
 });
 
