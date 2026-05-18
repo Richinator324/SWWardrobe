@@ -41,7 +41,7 @@ const overlayClothing = (clothingPath) => {
             clothingImage.src = clothingPath;
         };
 
-        skinImage.src = currentSkinBase64;
+        skinImage.src = currentSkinBase64 || "./steve.png";
     });
 };
 
