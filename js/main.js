@@ -41,7 +41,7 @@ const overlayClothing = (clothingPath) => {
             clothingImage.src = clothingPath;
         };
 
-        skinImage.src = currentSkinBase64;
+        skinImage.src = currentSkinBase64 || "./steve.png";
     });
 };
 
@@ -85,3 +85,5 @@ document.getElementById("upload").addEventListener("change", (e) => {
 
 // Event listener for clothing selection
 document.getElementById("clothingSelect").addEventListener("change", updateSkin);
+// Run once on startup so Steve appears by default
+updateSkin();
