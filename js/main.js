@@ -5,7 +5,7 @@ const viewer = new SkinViewer({
     canvas: document.getElementById("skinViewer"),
     width: 400,
     height: 600,
-    skin: "./textures/steve.png", // FIXED PATH
+    skin: "/textures/steve.png", // VITE-CORRECT PATH
 });
 
 viewer.controls.enableZoom = true;
@@ -41,14 +41,14 @@ const overlayClothing = (clothingPath) => {
             clothingImage.src = clothingPath;
         };
 
-        // FIXED PATH: Use Steve skin if no uploaded skin exists yet
-        skinImage.src = currentSkinBase64 || "./textures/steve.png";
+        // VITE-CORRECT PATH
+        skinImage.src = currentSkinBase64 || "/textures/steve.png";
     });
 };
 
 // Function to update the 3D viewer with selected clothing
 const updateSkin = async () => {
-    const clothingPath = `./textures/${document.getElementById("clothingSelect").value}.png`; // FIXED PATH
+    const clothingPath = `/textures/${document.getElementById("clothingSelect").value}.png`; // VITE-CORRECT PATH
 
     try {
         // Apply the selected clothing overlay
@@ -88,5 +88,5 @@ document.getElementById("upload").addEventListener("change", (e) => {
 // Event listener for clothing selection
 document.getElementById("clothingSelect").addEventListener("change", updateSkin);
 
-// OPTIONAL: If you want Steve to appear immediately, uncomment this:
+// Load Steve + default outfit on startup
 updateSkin();
