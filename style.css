@@ -22,7 +22,7 @@ header {
   align-items: center;
   width: 100%;
   padding: 5px 15px;
-  background-color: #832d02;
+  background-color: #7c5343;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
   color: #e36424;
   font-size: 16px;
@@ -53,11 +53,11 @@ header img {
 #controls {
   padding: 20px;
   width: 300px;
-  background: #f5915f;
+  background: #7c5343;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  border-right: 2px solid #4a0f0f;
+  border-right: 2px solid #5a3b2f;
 }
 
 #controls h1 {
@@ -77,14 +77,14 @@ header img {
 }
 
 #controls input {
-  background: #f5915f;
-  color: #e6bda9;
+  background: #bb8570;
+  color: #b17c62;
   border: 1px solid #e36424;
 }
 
 #controls button {
   background: #863e1a;
-  color: white;
+  color: #855d49;
   cursor: pointer;
   font-weight: bold;
 }
@@ -99,7 +99,7 @@ header img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #421a1a;
+  background: #5a3b2f;
 }
 
 /* CANVAS */
@@ -139,8 +139,8 @@ canvas {
   padding: 10px;
   border: 1px solid #e36424;
   border-radius: 5px;
-  background: #4a2a2a;
-  color: #f5dada;
+  background: #bb8570;
+  color: #b17c62;
   font-size: 1rem;
   appearance: none;
   cursor: pointer;
