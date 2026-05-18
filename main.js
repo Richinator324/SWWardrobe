@@ -89,4 +89,4 @@ document.getElementById("upload").addEventListener("change", (e) => {
 document.getElementById("clothingSelect").addEventListener("change", updateSkin);
 
 // OPTIONAL: If you want Steve to appear immediately, uncomment this:
-// updateSkin();
+updateSkin();
