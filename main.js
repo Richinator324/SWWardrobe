@@ -47,7 +47,7 @@ const overlayClothing = (clothingPath) => {
 
 // Function to update the 3D viewer with selected clothing
 const updateSkin = async () => {
-    const clothingPath = `./${document.getElementById("clothingSelect").value}.png`;
+    const clothingPath = `textures/${document.getElementById("clothingSelect").value}.png`;
 
     try {
         // Apply the selected clothing overlay
