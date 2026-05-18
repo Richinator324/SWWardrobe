@@ -78,7 +78,7 @@ header img {
 
 #controls input {
   background: #bb8570;
-  color: #b17c62;
+  color: #e36424;
   border: 1px solid #e36424;
 }
 
@@ -140,7 +140,7 @@ canvas {
   border: 1px solid #e36424;
   border-radius: 5px;
   background: #bb8570;
-  color: #b17c62;
+  color: #e36424;
   font-size: 1rem;
   appearance: none;
   cursor: pointer;
