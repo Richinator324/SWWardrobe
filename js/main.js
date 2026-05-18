@@ -5,7 +5,7 @@ const viewer = new SkinViewer({
     canvas: document.getElementById("skinViewer"),
     width: 400,
     height: 600,
-    skin: "./steve.png", // Default skin
+    skin: "./textures/steve.png", // FIXED PATH
 });
 
 viewer.controls.enableZoom = true;
@@ -26,7 +26,7 @@ const overlayClothing = (clothingPath) => {
 
     return new Promise((resolve) => {
         skinImage.onload = () => {
-            // Draw the base skin
+            // Draw the base skin (unchanged)
             ctx.drawImage(skinImage, 0, 0, 64, 16, 0, 0, 64, 16);
 
             clothingImage.onload = () => {
@@ -41,13 +41,14 @@ const overlayClothing = (clothingPath) => {
             clothingImage.src = clothingPath;
         };
 
-        skinImage.src = currentSkinBase64 || "./steve.png";
+        // FIXED PATH: Use Steve skin if no uploaded skin exists yet
+        skinImage.src = currentSkinBase64 || "./textures/steve.png";
     });
 };
 
 // Function to update the 3D viewer with selected clothing
 const updateSkin = async () => {
-    const clothingPath = `./${document.getElementById("clothingSelect").value}.png`;
+    const clothingPath = `./textures/${document.getElementById("clothingSelect").value}.png`; // FIXED PATH
 
     try {
         // Apply the selected clothing overlay
@@ -55,6 +56,7 @@ const updateSkin = async () => {
 
         // Load the modified skin into the viewer
         viewer.loadSkin(modifiedSkin);
+
         // Enable the download button
         const downloadButton = document.getElementById("downloadButton");
         downloadButton.style.display = "block";
@@ -85,5 +87,6 @@ document.getElementById("upload").addEventListener("change", (e) => {
 
 // Event listener for clothing selection
 document.getElementById("clothingSelect").addEventListener("change", updateSkin);
-// Run once on startup so Steve appears by default
-updateSkin();
+
+// OPTIONAL: If you want Steve to appear immediately, uncomment this:
+// updateSkin();
